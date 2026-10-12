@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: 'IBM Plex Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --color-graphite: #20252B;
+  --color-clinical-white: #FFFFFF;
+  --color-medical-lime: #B7D94A;
+  --color-steel-grey: #A8B0B8;
+  --color-deep-black: #111519;
+  --color-pale-mint: #E6EDDB;
+  --color-light-grey: #F3F5F6;
+
+  --color-primary-bg: #0B1015;
+  --color-container-bg: #20252B;
+  --color-surface-bg: #F8FAFB;
+  --color-card-bg: #F2F4F5;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-surface-bg);
+    color: #191C1D;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+  }
+}
+
+/* Custom scrollbar for subtle clinical feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F3F5F6;
+}
+::-webkit-scrollbar-thumb {
+  background: #A8B0B8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #20252B;
+}
+
+/* Material Symbols styling helper */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.material-symbols-outlined.filled {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Glassmorphism & custom utility shadows */
+.clinical-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(168, 176, 184, 0.3);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.clinical-card:hover {
+  border-color: #20252B;
+  transform: translateY(-2px);
+}
+
+.clinical-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  background-color: #E6EDDB;
+  color: #111519;
+  font-family: var(--font-heading);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+}
+
+/* GSAP animated mask and clip utilities */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(20px);
+}

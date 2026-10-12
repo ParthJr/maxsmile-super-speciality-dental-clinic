@@ -1,0 +1,6 @@
+{
+  "name": "Maxsmile Super Speciality Dental Clinic",
+  "description": "Super Speciality Dental Clinic delivering advanced oral rehabilitation, micro-endodontics, and maxillofacial care in Sargasan, Gandhinagar.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
